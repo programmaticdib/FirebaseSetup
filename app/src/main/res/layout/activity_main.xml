@@ -51,4 +51,25 @@
         android:layout_marginTop="20dp"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/loaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_stat_name" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/loaction2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loaction"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_stat_name" />
+
 </RelativeLayout>

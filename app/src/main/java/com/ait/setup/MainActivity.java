@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private Uri imageUri;
     private StorageReference dbRef;
     private ImageView imageView;
+    private FloatingActionButton location, loaction2;
 
 
     @Override
@@ -52,6 +53,15 @@ public class MainActivity extends AppCompatActivity {
         imgButton = findViewById(R.id.imgButton);
         imageView =  findViewById(R.id.imageView);
         dbRef = FirebaseStorage.getInstance().getReference().child("Images");
+        location = findViewById(R.id.loaction);
+        loaction2 = findViewById(R.id.loaction2);
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LocationActivity.class);
+                startActivity(intent);
+            }
+        });
 
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         ref = FirebaseDatabase.getInstance().getReference();
@@ -68,6 +78,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, DataActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        loaction2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MapActivity.class);
                 startActivity(intent);
             }
         });
